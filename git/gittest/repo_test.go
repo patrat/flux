@@ -12,6 +12,7 @@ import (
 
 	"github.com/weaveworks/flux/cluster/kubernetes/testfiles"
 	"github.com/weaveworks/flux/git"
+	"github.com/weaveworks/flux/gpg"
 )
 
 type Note struct {
@@ -67,7 +68,7 @@ func TestCommit(t *testing.T) {
 }
 
 func TestSignedCommit(t *testing.T) {
-	gpgHome, signingKey, gpgCleanup := GPGKey(t)
+	gpgHome, signingKey, gpgCleanup := gpg.GPGKey(t)
 	defer gpgCleanup()
 
 	config := TestConfig

@@ -48,7 +48,7 @@ spec:
       # - name: kubeconfig
       #   configMap:
       #     name: flux-kubeconfig
-
+      
       containers:
       - name: flux
         # There are no ":latest" images for flux. Find the most recent
